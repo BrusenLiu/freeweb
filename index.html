@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网页</title>
+    <style>
+        /* 基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f6f6f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 全局样式 */
+        header {
+            background: linear-gradient(to right, #f06, #4e8ef7);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* 首页 */
+        #home {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f06, #4e8ef7);
+            color: #fff;
+        }
+        #home h1 {
+            font-size: 3em;
+            font-weight: 700;
+        }
+        #home p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        /* 简历部分 */
+        #resume {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        #resume h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        #resume ul {
+            list-style: none;
+            padding: 0;
+        }
+        #resume ul li {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* 作品集部分 */
+        #portfolio {
+            padding: 80px 20px;
+            background-color: #f1f1f1;
+        }
+        #portfolio h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .portfolio-item {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #f1f1f1;
+        }
+        .portfolio-item p {
+            padding: 15px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* 联系我部分 */
+        #contact {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 600;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            transition: border 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #4e8ef7;
+        }
+        form button {
+            background-color: #4e8ef7;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #f06;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#resume">简历</a></li>
+                <li><a href="#portfolio">作品</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>欢迎来到我的个人网页</h1>
+        <p>我是一个UI设计师，专注于创造简洁、实用的用户界面。</p>
+    </section>
+
+    <section id="resume">
+        <h2>简历</h2>
+        <ul>
+            <li><strong>教育背景：</strong>XXX大学，设计专业</li>
+            <li><strong>工作经验：</strong>曾在XXX公司担任UI设计师</li>
+            <li><strong>技能：</strong>Figma, Photoshop, HTML, CSS</li>
+            <li><strong>证书：</strong>Adobe认证UI设计师</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>作品集</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="work1.jpg" alt="作品1">
+                <p>作品描述：移动端应用UI设计</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="work2.jpg" alt="作品2">
+                <p>作品描述：网站首页界面设计</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="work3.jpg" alt="作品3">
+                <p>作品描述：电商平台UI设计</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>联系我</h2>
+        <form action="contact.php" method="POST">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">留言:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">发送</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 我的个人网页 | 设计师：XXX</p>
+    </footer>
+
+</body>
+</html>
